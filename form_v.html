@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form vslidation my own project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    .form{
+        width: 100%;
+        height: auto;
+    }
+    </style>
+
+</head>
+<body>
+<div class="row">
+    <div class="col-md-6 m-auto">
+
+ <form action="extra.html" onsubmit="return data()">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" id="f1" class="form-control">
+                    </div>  
+                    <div class="form-group">
+                        <label action="return" for="">Contect</label>
+                        <input type="text" id="f2" class="form-control">
+                    </div>  
+                    <div class="form-group">
+                    <label for="">Email</label>
+                        <input type="email" id="f3" class="form-control">
+                    </div>   
+                    
+                    <div class="form-group">
+                    <label for="">Password</label>
+                        <input type="password" id="f4" class="form-control">
+                    </div>  
+
+                    <div class="form-group">
+                    <label for="">Conform</label>
+                        <input type="password" id="f5" class="form-control">
+                    </div>  
+                    <div class="form-group text-center py-3 w-100">
+                        <input class="btn btn-success" type="submit" value="submit">
+                    </div>
+
+                </form>
+            </div>
+            </div>
+<script>
+    function data(){
+    var a = document.getElementById("f1").value;
+    var b = document.getElementById("f2").value;
+    var c = document.getElementById("f3").value;
+    var d = document.getElementById("f4").value;
+    var e = document.getElementById("f5").value;
+    if(a==""||b==""||c==""||d==""){
+        alert("field are mandatry");
+        return false;
+    }else if(b.length>10||b.length<10){
+        alert("Number should be 10 degits !please enter valid number")
+        return false
+    }else if(isNaN(b)){
+        alert("Only Number is allowed!please enter valid number")
+    }else if(d!=e){
+        alert("Please Enter same password")
+    }else{
+        true
+    }
+    }
+
+</script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
